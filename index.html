@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Login</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="image-box">
+            <img src="loginimg.jpg">
+        </div>
+        <div class="content-box">
+            <div class="form-box">
+                <h2>LOGIN</h2>
+                <br>
+                <form name='login form'>
+                    <input type="text" placeholder="Username" class="input" id="username" name="username" required>
+                    <br><br><br>
+                    <input type="password" placeholder="Password" class="input" id="psw" name="password" required>
+                    <br><br>
+                    <div class="remember">
+                        <label><input type="checkbox" name="">Remember me</label>
+                    </div>
+                    <br><br>
+                    <input type="button" class="login-btn" onclick="validate_login()" value="Submit">
+
+                    <div class="desc">
+                        <p>Are you a new user? <a href="register.html">Register Here</a> </p>
+                    </div>
+                </form>
+                <h3><b>Login with social media</b></h3>
+                <ul class="social-media">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbySAbwvoG0PJXnvgmTXUN6NvN6GqZwrC-EuupzUDRSOhkDzDHY4yof5g341AIIeI7nwxg/exec'
+        const form = document.forms['login form']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you! your form is submitted successfully."))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+        
+    </script>
+</body>
+
+</html>

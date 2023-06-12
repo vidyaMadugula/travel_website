@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script>
+    function Subforms()
+    {
+      $.ajax({
+        url:'https://api.apispreadsheets.com/data/8FOVmmZ9XoUv7f6o/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success:function()
+        {
+          alert("Thank You, your request is submitted")
+        },
+        error:function(){
+          alert("There was an error:(")
+        }
+      });
+    }
+  </script>
+  <meta charset="UTF-8">
+ 
+  <link rel="stylesheet" href="style.css">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../script.js"></script>
+  <title>CONTACT US</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Hitec City</div>
+          <div class="text-two">Hyderabad</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+91 8790926330</div>
+          <div class="text-two">+91 76999 76980</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">voyager@gmail.com</div>
+          <div class="text-two">travel_guide@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">We are here to assist you!</div>
+        <br>
+        <p>In case of any issues related to our website, feel free to bring them to our notice.<br>
+         
+          For any grievances fill in the details below.
+          </p>
+        <form action="#" id="myForm">
+          <br>
+          <br>
+          <br>
+          <div class="input-box" >
+            <input name="name" id="name" type="text" placeholder="Enter your name">
+          </div>
+          <div class="input-box">
+            <input name="email" id="email" type="text" placeholder="Enter your email">
+          </div>
+          <div class="input-box">
+            <input name="number" id="mno" type="text" placeholder="Enter your mobile-number">
+          </div>
+
+          <div class="input-box message-box">
+
+          </div>
+          <div class="button">
+            <input type="button" onclick="validate_contactus()" value="Send Now">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+h2{
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-bottom: 4px solid #ff4854;
+    display: inline-block;
+    font-style:garamond;
+}
+h3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: sans-serif;
+    
+}
+a{
+    color: white;
+    font-weight: 500;
+}
+a:hover{
+    transform: scale(1.05);
+    font-weight: 600;
+}
+section{
+    position: relative;
+    width: 100%;
+    display:flex;
+    height:100vh;
+}
+section .image-box{
+    position: relative;
+    width: 50%;
+    height: 100%;  
+}
+section .image-box:before{
+    margin:40px 0;
+    border-radius: 15px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background: linear-gradient(225deg,#159957,#155799);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+section .image-box img{
+    border-radius: 15px;
+    margin:40px 0;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+ section .content-box .form-box{
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gray;
+}
+section .content-box{
+    display:flex;
+    width:50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+section .content-box .form-box .input{
+    width:60%;
+    padding: 10px 20px;
+    outline:none;
+    font-weight:400;
+    border: 1px solid #607d8b;
+    border-radius: 6px;
+    
+}
+section .content-box .form-box .login-btn{
+    background-color:white;
+    color:black;
+    text-decoration: none;
+    border:none;
+    padding: 10px 35px;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+button{
+    background-color:white;
+    color:black;
+    text-decoration: none;
+    border:none;
+    padding: 10px 35px;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+section .content-box .form-box .login-btn:hover{
+    box-shadow: 3px 3px 3px gray;
+    transform: scale(1.1);
+}
+section .content-box .form-box .remember{
+    font-weight: 500;
+    font-size:15px;
+    text-align: left;
+    padding-left:13.5%;
+
+}
+section .content-box .form-box .desc{
+    font-weight: 500;
+    font-size:15px;
+    font-family: sans-serif;
+}
+section .content-box .form-box .social-media{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;    
+}
+section .content-box .form-box .social-media li{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;  
+    padding:2px;  
+}
+section .content-box .form-box .social-media li:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
+@media (max-width: 850px){
+    section .image-box{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        padding-right: 50px;
+    }
+    section .content-box{
+        display:flex;
+        width:100%;
+        margin: 20px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index:1;
+    }
+    section .content-box .form-box{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid gray;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gray;
+    }
+}
